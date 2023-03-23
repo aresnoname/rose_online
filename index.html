@@ -1,10 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>PAGE: Rose</title>
+
+    <link rel="stylesheet" type="text/css" href="./assets/scss/app.min.css" />
   </head>
-  <body></body>
+  <body>
+    <main class="main">
+      <h1 class="main__title">Lista de drops Rose Online BR</h1>
+
+      <section class="droplist">
+        <div class="container">
+          <div class="droplist__category">
+            <select
+              class="droplist__category-select"
+              id="droplist__category-select"
+            >
+              <option value="0" selected>
+                Pesquisar todos itens por categorias:
+              </option>
+              <option value="mob">Todos Monstros</option>
+              <option value="item">Todos Itens</option>
+            </select>
+          </div>
+          <form class="droplist__search">
+            <label class="droplist__search-label" for="droplist__search-input">
+              Digite o item que você queira buscar:
+            </label>
+
+            <input
+              class="droplist__search-input"
+              list="droplist__search-list"
+              name="droplist__search-input"
+              id="droplist__search-input"
+              autocomplete="off"
+              placeholder="Digite o nome do item:"
+            />
+
+            <datalist
+              class="droplist__search-datalist"
+              id="droplist__search-list"
+            >
+              <!--Aqui fica os options via JS-->
+              <!--<option value="Valor que irá aparecer"-->
+            </datalist>
+
+            <button
+              class="droplist__search-submit"
+              id="droplist__search-submit"
+              type="submit"
+            >
+              Pesquisar
+            </button>
+          </form>
+        </div>
+
+        <div class="container">
+          <div class="droplist__show">
+            <div class="droplist__show-loading">
+              <div class="loader"></div>
+            </div>
+
+            <div class="droplist__show-content" id="droplist__show-content">
+              <div class="list">
+                <div class="list__header">
+                  <span class="list__header-monster">Monster</span>
+
+                  <span class="list__header-level">Level</span>
+
+                  <span class="list__header-map">Map</span>
+
+                  <span class="list__header-item">Item</span>
+                </div>
+
+                <div class="list__content">
+                  <span class="list__content-item">Item</span>
+
+                  <span class="list__content-monster">
+                    Monster <span class="list__content-map">[ Map ]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="text/javascript" src="./assets/js/database.js"></script>
+    <script type="text/javascript" src="./assets/js/droplist.js"></script>
+  </body>
 </html>

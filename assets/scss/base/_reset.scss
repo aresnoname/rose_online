@@ -1,0 +1,32 @@
+/**/
+/**/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $bg-color;
+  font-family: cursive;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $container-sm;
+
+  @media (min-width: 768px) {
+    max-width: $container-md;
+  }
+
+  @media (min-width: 1025px) {
+    max-width: $container-lg;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: $container-xl;
+  }
+}
